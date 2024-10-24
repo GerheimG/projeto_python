@@ -31,8 +31,8 @@ numero = int(input('Entre com o número: '))
 # pegando ano atual 
 ano_atual = datetime.datetime.now().year
 idade= int(ano_atual) - nascimento
-nascimentodopai = int(ano_atual) - nascimento
-nascimentodamae = int(ano_atual) - nascimento 
+idadedoapai = int(ano_atual) - int(nascimentodopai)
+idadedamae = int(ano_atual) - int(nascimentodamae)
 
 #saída
 print('=' * 70)
@@ -51,6 +51,6 @@ print(f'Bairro...............: {bairro}')
 print(f'Rua..................: {rua}')
 print(f'Número...............: {numero}')
 print(f'Sua mãe se chama {nomedamae} e seu pai se chama {nomedopai}')
-print(f'A idade de seu pai é {nascimentodopai} e da sua mãe é {nascimentodamae}')
+print(f'A idade de seu pai é {idadedoapai} e da sua mãe é {idadedamae}')
 print('=' * 70)
 print('')
