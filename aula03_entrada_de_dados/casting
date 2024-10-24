@@ -50,12 +50,13 @@ print('Altura.............: ', altura)
 
 
 # saída interpolada
-print(f'Olá {nome}, você tem {idade} anos!')
+print('=' * 70)
 print(f'CEP..................: {cep}')
 print(f'Bairro...............: {bairro}')
 print(f'Rua..................: {rua}')
 print(f'Número...............: {numero}')
 print('=' * 70)
+print(f'Olá {nome}, você tem {idade} anos!')
 print(f'Sua mãe se chama {nomedamae} e seu pai se chama {nomedopai}')
 print(f'A idade de {nomedopai} é {idadedoapai} e da {nomedamae} é {idadedamae}')
 print(f'A idade de sua mâe é {idadedamae} e a de seu pai é {idadedopai}')
