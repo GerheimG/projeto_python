@@ -18,6 +18,8 @@ peso = (input('Entre com seu peso: '))
 altura = (input('Coloque sua altura: '))
 nomedamae = (input('Nome da sua mãe: '))
 nomedopai = (input('Nome do pai: '))
+nascimentodopai = (input('Ano de nascimento do pai: '))
+nascimentodamae = (input('Ano de nascimento da mãe: '))
 
 # entrada com casting
 nascimento = int(input('Ano de nascimento: '))
@@ -29,6 +31,8 @@ numero = int(input('Entre com o número: '))
 # pegando ano atual 
 ano_atual = datetime.datetime.now().year
 idade= int(ano_atual) - nascimento
+nascimentodopai = int(ano_atual) - nascimento
+nascimentodamae = int(ano_atual) - nascimento 
 
 #saída
 print('=' * 70)
@@ -47,5 +51,6 @@ print(f'Bairro...............: {bairro}')
 print(f'Rua..................: {rua}')
 print(f'Número...............: {numero}')
 print(f'Sua mãe se chama {nomedamae} e seu pai se chama {nomedopai}')
+print(f'A idade de seu pai é {nascimentodopai} e da sua mãe é {nascimentodamae}')
 print('=' * 70)
 print('')
