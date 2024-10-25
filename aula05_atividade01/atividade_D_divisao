@@ -17,7 +17,7 @@ numero1 = float(input('Insira o 1° número: '))
 numero2 = float(input('Insira o 2° número: '))
 
 # PROCESSAMENTO
-divisao = float(numero1) / (numero2)
+divisao = (numero1) / (numero2)
 
 # SAÍDA DE DADOS
 float(input(f'A divisão de {numero1} e {numero2} será {divisao:.4f}'))
