@@ -23,4 +23,4 @@ idadeatual = int(ano_atual) - int(nascimento)
 
 # SAÍDA DE DADOS
 print(f'Olá {nome} você tem ou irá fazer {idadeatual} anos!!')
-print('')
+print('=')

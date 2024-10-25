@@ -23,4 +23,4 @@ media = (nota1 + nota2 + nota3 + nota4) / 4
 
 #SAÍDA DE DADOS
 print(f'A média das seguintes notas \n {nota1}, {nota2}, {nota3} e {nota4} será {media}')
-print('')
+print('=')

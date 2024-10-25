@@ -31,3 +31,4 @@ resultado = {vezes1, vezes2, vezes3, vezes4, vezes5, vezes6, vezes7, vezes8, vez
 
 # SAÍDA DE DADOS 
 print(f'A tabuada de {num} é igual a {resultado}')
+print('=')

@@ -21,4 +21,4 @@ divisao = (numero1) / (numero2)
 
 # SAÍDA DE DADOS
 float(input(f'A divisão de {numero1} e {numero2} será {divisao:.4f}'))
-print('')
+print('=')

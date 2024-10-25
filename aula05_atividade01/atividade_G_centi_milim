@@ -24,3 +24,4 @@ milim = medidax * 1000
 
 # SAÍDA DE DADOS 
 print(f'Convertendo {medidax} metro(s) para centímetros será {cent} e \n para milímetros será {milim}')
+print('=')

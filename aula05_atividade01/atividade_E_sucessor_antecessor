@@ -19,3 +19,4 @@ antecessor = n1 - 1
 
 # SAÍDA DE DADOS
 print(f'De {n1} seu sucessor será {sucessor} e seu antecessor será {antecessor}')
+print('=')

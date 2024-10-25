@@ -19,3 +19,4 @@ triplo = (numerox) * 3
 
 # SAÍDA DE DADOS 
 (print(f'Com o {numerox} seu dobro será {dobro} e seu triplo será {triplo}'))
+print('=')

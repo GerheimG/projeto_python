@@ -22,3 +22,4 @@ reais = float(input('Insira qualquer valor em reais: '))
 dolar = reais * 5.71
 
 print(f'O valor {reais} real/reais será {dolar} dólar/dólares')
+print('=')
