@@ -6,4 +6,4 @@ porcentagem = int(input('Escolha qual % quer: '))
 
 porcento = numerox * (porcentagem/100)
 
-print(f'Essa é a porcentagem de {numerox}: {porcento}')
+print(f'Essa é a porcentagem de {numerox}: {porcento:.2f}')
