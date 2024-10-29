@@ -1,0 +1,19 @@
+import os 
+os.system('cls')
+
+a = int(input('Escolha um número inteiro: '))
+b = int(input('Escolha outro número inteiro: '))
+c = int(input('Escolha mais um número inteiro: '))
+resposta = ''
+
+
+if a >= b + c:
+    resposta = f'O número {a} é maior ou igual a {b + c}'
+elif a <= b + c:
+    resposta = f'O número {a} é menor ou igual a {b + c}'
+else:
+    resposta = f'O número {a} é menor que {b + c}'
+
+# saída
+print(resposta)
+
