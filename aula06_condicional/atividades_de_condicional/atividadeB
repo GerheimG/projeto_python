@@ -9,32 +9,22 @@ numero1 = float(input('Insira um valor: '))
 numero2 = float(input('Insira outro valor: '))
 numero3 = float(input('Insira outro valor: '))
 resposta = ''
-
-if numero1 > (numero2 and numero3):
-    resposta1 = f'O {numero1} é o maior!'
-
-elif numero2 > (numero1 and numero3):
-    resposta1 = f'O {numero2} é o maior!'
-
-elif numero3 > (numero1 and numero2):
-    resposta1 = f'O {numero3} é o maior!'
-
-
-
-if numero1 == (numero2 and numero3):
-    resposta0 = f'Todos os {numero1, numero2, numero3} são iguais'
+resposta1 = ''
+if numero1 > numero2 and numero1 > numero3:
+    resposta = f'{numero1} é o maior número'
+elif numero2 > numero1 and numero2 > numero3:
+    resposta = f'{numero2} é o maior número'
+elif numero3 > numero1 and numero3 > numero2:
+    resposta = f'{numero3} é o maior número'
+if numero1 < numero2 and numero1 < numero3:
+    resposta1 = f'{numero1} é o menor número'
+elif numero2 < numero1 and numero2 < numero3:
+    resposta1 = f'{numero2} é o menor número'
+elif numero3 < numero1 and numero3 < numero2:
+    resposta1 = f'{numero3} é o menor número'
+elif numero1 == numero2 == numero3:
+    resposta = f'Todos os números são iguais'
 else:
-     print()
+    print()
 
-
-if numero1 < (numero2 and numero3):
-        resposta = f'O {numero1} é o menor!'
-
-elif numero2 < (numero1 and numero3):
-     resposta = f'O {numero2} é o menor!'
-
-elif numero3 < (numero1 and numero2):
-     resposta = f'O {numero3} é o menor!'
-
-
-print(resposta1, "\n", resposta)
+print(resposta, resposta1)
