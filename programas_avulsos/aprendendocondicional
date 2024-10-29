@@ -22,6 +22,7 @@ resposta1 = ''
 resposta2 = ''
 resposta3 = ''
 
+# condicionais
 
 if a >= b + c:
     resposta1 = f'O número {a} é maior ou igual a {b + c}'
