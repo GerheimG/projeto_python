@@ -1,0 +1,15 @@
+# ATIVIDADE E
+
+import os 
+os.system('cls')
+
+kilometro = float(input('Insira a distância: '))
+resposta = ''
+if kilometro < 200:
+   preoco1 = kilometro * 0.70
+   resposta = f'O preço da viagem será de {preoco1} reais'
+else:
+   preco2 = kilometro * 0.40
+   resposta = f'O preço da viagem será de {preco2} reias'
+
+print(resposta)

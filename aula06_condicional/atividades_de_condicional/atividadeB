@@ -1,0 +1,40 @@
+#ATIVIDADE B 
+
+import os
+
+os.system('cls')
+
+
+numero1 = float(input('Insira um valor: '))
+numero2 = float(input('Insira outro valor: '))
+numero3 = float(input('Insira outro valor: '))
+resposta = ''
+
+if numero1 > (numero2 and numero3):
+    resposta1 = f'O {numero1} é o maior!'
+
+elif numero2 > (numero1 and numero3):
+    resposta1 = f'O {numero2} é o maior!'
+
+elif numero3 > (numero1 and numero2):
+    resposta1 = f'O {numero3} é o maior!'
+
+
+
+if numero1 == (numero2 and numero3):
+    resposta0 = f'Todos os {numero1, numero2, numero3} são iguais'
+else:
+     print()
+
+
+if numero1 < (numero2 and numero3):
+        resposta = f'O {numero1} é o menor!'
+
+elif numero2 < (numero1 and numero3):
+     resposta = f'O {numero2} é o menor!'
+
+elif numero3 < (numero1 and numero2):
+     resposta = f'O {numero3} é o menor!'
+
+
+print(resposta1, "\n", resposta)

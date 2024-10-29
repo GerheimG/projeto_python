@@ -1,0 +1,17 @@
+# ATIVIDADE C 
+
+import os
+
+os.system('cls')
+
+velocidade = float(input('Insira sua velocidade: '))
+limite = 60
+resposta = ''
+
+
+if velocidade < limite:
+    resposta = f'Você estava dentro do limite adequado de {limite} km!'
+else:
+    resposta = f'Você excedeu o limite permitido de {limite} km!!'
+
+print(resposta)
