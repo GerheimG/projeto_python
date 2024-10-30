@@ -25,6 +25,8 @@ elif salario < mediabaixa:
     resposta = f'Seu novo salário será {salariofinal1}'
 
 else:
-    resposta = f'Seu salário se mantera o mesmo'
+    resposta = f'Seu salário se manterá o mesmo'
+
+
 print(resposta)
     
