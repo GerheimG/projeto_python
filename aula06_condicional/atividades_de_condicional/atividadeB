@@ -10,6 +10,8 @@ numero2 = float(input('Insira outro valor: '))
 numero3 = float(input('Insira outro valor: '))
 resposta = ''
 resposta1 = ''
+
+
 if numero1 > numero2 and numero1 > numero3:
     resposta = f'{numero1} é o maior número'
 elif numero2 > numero1 and numero2 > numero3:
