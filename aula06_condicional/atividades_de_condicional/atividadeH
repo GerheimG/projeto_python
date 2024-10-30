@@ -1,0 +1,6 @@
+# Atividade H
+
+import os
+
+os.system('cls')
+
