@@ -9,15 +9,22 @@ mediaalta = 1500
 mediabaixa = 1000
 resposta = ''
 
-if salario >= mediaalta:
+
+if salario <= 0:
+    print('Valor inválido!!')
+
+elif salario > mediaalta:
     bonus05 = mediaalta * 0.05
     salariofinal = salario + bonus05
     resposta = f'Seu novo salário será {salariofinal}'
-else: 
-    salario <= mediabaixa
+
+
+elif salario < mediabaixa:
     bonus10 = mediabaixa * 0.10
     salariofinal1 = salario + bonus10
     resposta = f'Seu novo salário será {salariofinal1}'
 
+else:
+    resposta = f'Seu salário se mantera o mesmo'
 print(resposta)
     
