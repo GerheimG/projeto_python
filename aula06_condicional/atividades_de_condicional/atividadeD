@@ -5,24 +5,21 @@ import os
 os.system('cls')
 
 salario = float(input('Insira seu salário atual: '))
-mediaalta = 1500
-mediabaixa = 1000
 resposta = ''
 
 
 if salario <= 0:
     print('Valor inválido!!')
 
-elif salario > mediaalta:
-    bonus05 = mediaalta * 0.05
-    salariofinal = salario + bonus05
-    resposta = f'Seu novo salário será {salariofinal}'
+elif salario > 1500:
+    novo = salario * 1.05
+    
+    resposta = f'Seu novo salário será {novo}'
 
 
-elif salario < mediabaixa:
-    bonus10 = mediabaixa * 0.10
-    salariofinal1 = salario + bonus10
-    resposta = f'Seu novo salário será {salariofinal1}'
+elif salario < 1000:
+    novo = salario * 1.10
+    resposta = f'Seu novo salário será {novo}'
 
 else:
     resposta = f'Seu salário se manterá o mesmo'

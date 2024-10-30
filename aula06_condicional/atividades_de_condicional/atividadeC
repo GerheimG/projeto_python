@@ -9,9 +9,9 @@ limite = 60
 resposta = ''
 
 
-if velocidade < limite:
-    resposta = f'Você estava dentro do limite adequado de {limite} km!'
+if velocidade <= limite:
+    resposta = f'Você estava dentro do limite adequado de {limite} km/h!'
 else:
-    resposta = f'Você excedeu o limite permitido de {limite} km!!'
+    resposta = f'Você excedeu o limite permitido de {limite} km/h!!'
 
 print(resposta)
