@@ -4,13 +4,13 @@ import os
 
 os.system('cls')
 
-a = int(1)
-b = int(-6)
-c = int(5)
+a = int(input('Insira o valor: '))
+b = int(input('Insira outro valor: '))
+c = int(input('Insira outro valor: '))
 
 delta = (b ** 2) - (4 * a * c)
 x1 = (-b + delta ** 0.5)  / 2*a
 x2 = (-b - delta ** 0.5)  / 2*a
 
 
-print(f'As raízes da equação são {x1, x2}')
+print(f'As raízes da equação são {x1:.2f}, {x2:.2f}')
