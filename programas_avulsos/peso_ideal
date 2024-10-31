@@ -1,0 +1,23 @@
+#calculando o peso ideal H ou M 
+ 
+
+import os
+import sys
+
+os.system('cls')
+
+genero = str(input('Coloque seu gênero: '))
+altura = float(input('Insira sua altura: '))
+resposta = ''
+
+
+if genero == 'HOMEM'or 'Homem' or 'homem':
+        pesoidealH = (72.7 * altura) - 58
+        resposta = f'Seu peso ideal sendo {genero} é {pesoidealH:.2f}'
+
+elif genero == 'MULHER' or 'Mulher' or 'mulher':
+    pesoidealM = (62.1 * altura) - 44.7
+    resposta = f'Seu peso ideal sendo {genero} é {pesoidealM:.2f}'
+        
+
+print(resposta)
