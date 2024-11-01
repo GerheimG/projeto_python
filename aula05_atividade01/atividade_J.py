@@ -25,5 +25,5 @@ perimetro = 2 * (base + altura)
 
 # SAÍDA DE DADOS 
 
-print(f'Um retângulo com uma base de valor {base} e altura de valor {altura} \n terá um perímetro de {perimetro}')
+print(f'Um retângulo de base de valor {base} e altura de {altura} \n terá um perímetro de {perimetro}')
 print('=')
