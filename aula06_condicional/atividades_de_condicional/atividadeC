@@ -10,7 +10,7 @@ resposta = ''
 
 
 if velocidade <= limite:
-    resposta = f'Você estava dentro do limite adequado de {limite} km/h!'
+    resposta = f'Você estava dentro do limite de {limite} km/h!'
 else:
     resposta = f'Você excedeu o limite permitido de {limite} km/h!!'
 
