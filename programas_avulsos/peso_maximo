@@ -11,12 +11,12 @@ os.system('cls')
 peso = float(input('Quantos kilos de peixes? '))
 
 
-peso > 50
+peso >= 50
 multa = (peso - 50)
 valormulta = multa * 4
 
 if peso > 50:
-    print(f'O valor da sua multa será R${valormulta} reais')
+    print(f'O valor da sua multa será R${valormulta:.2f} reais')
 
 else:
     print(f'Seu peixe está dentro do peso permitido')
