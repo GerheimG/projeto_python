@@ -8,18 +8,15 @@ import math
 
 os.system('cls')
 
-numero = int(input('Insira um valor pra mostrar sua raiz: '))
+numero = float(input('Insira um valor pra mostrar sua raiz: '))
 
-
-raizQuadrada = math.sqrt(numero)
-arredondar_pra_cima = math.ceil(raizQuadrada)
-arredondar_pra_baixo = math.floor(raizQuadrada)
 
 if numero < 0:
     print('O resultado será um número complexo')
+    exit()
 else:
-    pass
+    raizQuadrada = math.sqrt(numero)
+    arredondar_pra_cima = math.ceil(raizQuadrada)
 
 
-
-print(f'A raiz de {numero} é: {arredondar_pra_baixo or arredondar_pra_cima}')
+print(f'A raiz de {numero} é: {arredondar_pra_cima}')
