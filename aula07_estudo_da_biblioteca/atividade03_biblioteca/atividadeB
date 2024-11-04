@@ -12,6 +12,7 @@ divisor = int(input('Insira o divisor valor: '))
 
 if divisor == 0:
     print('Divisão por zero não é permitida!!')
+    exit()
 else:
     divisao = dividendo / divisor
 
