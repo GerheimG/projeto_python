@@ -1,0 +1,9 @@
+# E) Faça um programa que receba uma frase e, em seguida, mostre quantas vezes as vogais foram utilizadas.
+
+import os
+
+
+os.system('cls')
+
+frase = 'Araras azuis'
+
