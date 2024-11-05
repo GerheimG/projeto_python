@@ -1,1 +1,15 @@
 # I) Faça um programa que receba o nome completo de uma pessoa e, em seguida, mostre o primeiro e o último nome.
+
+
+import os
+
+os.system('cls')
+
+nome_completo = 'Guilherme Gerheim Ferro'
+
+primeiro_nome = nome_completo[:9]
+ultimo_nome = nome_completo[-5:]
+
+primeult = primeiro_nome + ' ' + ultimo_nome
+
+print(primeult)

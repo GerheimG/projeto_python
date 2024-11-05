@@ -6,7 +6,7 @@ os.system('cls')
 
 nome = 'Josemar Silva'
 
-lista = nome.split(",")
+lista = nome.split()
 
 print(lista)
 
