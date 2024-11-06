@@ -5,12 +5,14 @@ import os
 
 os.system('cls')
 
-frase = ('Araras azuis').lower()
+frase = input('Insira uma palavra: ').lower()
 
 contagem_a = frase.count('a')
+contagem_e = frase.count('e')
 contagem_i = frase.count('i')
+contagem_o = frase.count('o')
 contagem_u = frase.count('u')
 
-todas = contagem_a + contagem_i + contagem_u
+todas = contagem_a + contagem_i + contagem_u + contagem_e + contagem_o
 
 print(f'As vogais aparecem {todas} vezes')

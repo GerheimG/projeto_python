@@ -5,11 +5,11 @@ import os
 
 os.system('cls')
 
-nome_completo = 'Guilherme Gerheim Ferro'
+nome_completo = input('Coloque seu nome: ').capitalize().strip()
 
-primeiro_nome = nome_completo[:9]
-ultimo_nome = nome_completo[-5:]
+lista = nome_completo.split()
+primeiro = lista[0:1]
+ultimo = lista[-1:]
 
-primeult = primeiro_nome + ' ' + ultimo_nome
 
-print(primeult)
+print(primeiro , ultimo)
