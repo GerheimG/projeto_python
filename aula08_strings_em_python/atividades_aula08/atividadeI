@@ -5,7 +5,7 @@ import os
 
 os.system('cls')
 
-nome_completo = input('Coloque seu nome: ').capitalize().strip()
+nome_completo = input('Coloque seu nome: ').capitalize()
 
 lista = nome_completo.split()
 primeiro = lista[0:1]
