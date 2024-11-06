@@ -21,4 +21,5 @@ else:
     unidade = (numero % 10) // 1
 
 
-print(f'Milhar {milhar}, centena {centena}, dezena {dezena}, unidade {unidade}')
+print(f'Milhar {milhar}, centena {centena}, \
+dezena {dezena}, unidade {unidade}')
