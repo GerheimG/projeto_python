@@ -16,3 +16,8 @@ contagem_u = frase.count('u')
 todas = contagem_a + contagem_i + contagem_u + contagem_e + contagem_o
 
 print(f'As vogais aparecem {todas} vezes')
+print(f'A vogal "A" aparece {contagem_a} vezes')
+print(f'A vogal "E" aparece {contagem_e} vezes')
+print(f'A vogal "I" aparece {contagem_i} vezes')
+print(f'A vogal "O" aparece {contagem_o} vezes')
+print(f'A vogal "U" aparece {contagem_u} vezes')

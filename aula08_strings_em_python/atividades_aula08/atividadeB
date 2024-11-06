@@ -4,7 +4,7 @@ import os
 
 os.system('cls')
 
-nome = 'João da Silva'
+nome = input('Insira o nome: ')
 nomenovo = nome.replace('Silva', 'Oliveira')
 
 print(f'Noma antigo: {nome}\n Nome novo: {nomenovo}')
