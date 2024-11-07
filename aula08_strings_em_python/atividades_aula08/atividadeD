@@ -14,9 +14,11 @@ maiscula = frase.upper()
 quantidade_caracter = len(frase)
 frase2 = 'programo'
 quantidade = len(frase2)
+invertida = frase[::-1]
 
 print(minuscula)
 print(maiscula)
 print(f'A frase toda tem: {quantidade_caracter} caracteres')
 print(f'A segunda palavra tem: {quantidade} caracteres')
+print(f'Invertida: {invertida}')
 
