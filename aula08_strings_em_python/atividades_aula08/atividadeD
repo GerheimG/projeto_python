@@ -21,4 +21,3 @@ print(maiscula)
 print(f'A frase toda tem: {quantidade_caracter} caracteres')
 print(f'A segunda palavra tem: {quantidade} caracteres')
 print(f'Invertida: {invertida}')
-
