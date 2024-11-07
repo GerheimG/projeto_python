@@ -15,7 +15,7 @@ if numero > 9999 or numero < 0:
     exit()
 else:
     
-    milhar= numero // 1000
+    milhar = numero // 1000
     centena = (numero % 1000) // 100
     dezena = (numero % 100) // 10
     unidade = (numero % 10) // 1
