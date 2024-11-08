@@ -10,6 +10,10 @@ sua_escolha = input('Escolha entre pedra, papel ou tesoura: ').lower().strip()
 
 escolhas = ['pedra', 'papel', 'tesoura']
 
+if sua_escolha != escolhas:
+    print('Opção inválida')
+    exit()
+
 escolha_maquina = random.choice(escolhas)
 
 if sua_escolha == 'papel' and escolha_maquina == 'pedra':
