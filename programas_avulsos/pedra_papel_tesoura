@@ -1,0 +1,35 @@
+# JOKENPO CONTRA A MAQUINA
+
+import os
+import random
+
+
+os.system('cls')
+
+sua_escolha = input('Escolha entre pedra, papel ou tesoura: ').lower().strip()
+
+escolhas = ['pedra', 'papel', 'tesoura']
+
+escolha_maquina = random.choice(escolhas)
+
+if sua_escolha == 'papel' and escolha_maquina == 'pedra':
+    print(f'Você escolheu {sua_escolha} e a máquina {escolha_maquina}, você ganhou')
+
+elif sua_escolha == 'papel' and escolha_maquina == 'tesoura':
+    print(f'Você escolheu {sua_escolha} e a máquina {escolha_maquina}, você perdeu')
+
+elif sua_escolha == 'pedra' and escolha_maquina == 'papel':
+    print(f'Você escolheu {sua_escolha} e a máquina {escolha_maquina}, você perdeu')
+
+elif sua_escolha == 'pedra' and escolha_maquina == 'tesoura':
+    print(f'Você escolheu {sua_escolha} e a máquina {escolha_maquina}, você ganhou')
+
+elif sua_escolha == 'tesoura' and escolha_maquina == 'pedra':
+    print(f'Você escolheu {sua_escolha} e a máquina {escolha_maquina}, você perdeu')
+
+elif sua_escolha == 'tesoura' and escolha_maquina == 'papel':
+    print(f'Você escolheu {sua_escolha} e a máquina {escolha_maquina}, você ganhou')
+
+else:
+    sua_escolha == escolha_maquina
+    print(f'Você escolheu {sua_escolha} e a máquina {escolha_maquina}, então empate!')
