@@ -11,7 +11,7 @@ goleiro = random.choice(escolhas)
 outro_jogador = random.choice(escolhas)
 
 
-pergunta = input('Você quer bater o pênalti? ').lower()
+pergunta = input('Você quer bater o pênalti? ').lower().strip()
 
 if pergunta != 'sim' and pergunta != 'não':
     print('opção invalida')
@@ -43,7 +43,7 @@ elif pergunta == 'não':
         exit()
 
     
-chute = input('Onde você irá chutar(meio,direita,esquerda,ângulo,canto direito ou esquerdo)? ').lower()
+chute = input('Onde você irá chutar(meio,direita,esquerda,ângulo,canto direito ou esquerdo)? ').lower().strip()
 
 if chute not in escolhas:
     print('Opção inválida')
