@@ -6,7 +6,7 @@ import os
 
 os.system('cls')
 
-print('APERTE "')
+para = print('APERTE "s" para parar')
 
 while True:
     frase = input('Insira uma frase ou nome: ').lower().strip()
@@ -21,4 +21,4 @@ while True:
         print('É um palíndromo')
         
     else:
-        print('Não é umpalíndromo') 
+        print('Não é um palíndromo') 

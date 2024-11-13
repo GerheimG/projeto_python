@@ -7,8 +7,6 @@ import os
 os.system('cls')
 
 
-
-
 while (True):
     usuario = 'Fidelim'
     senha = 'batataalada'
@@ -17,7 +15,7 @@ while (True):
     login_senha = input('Insira sua senha: ')
 
     if login_usuario != usuario and login_senha != senha:
-        print('Login e senha incoreto')
+        print('Login ou senha incorreto')
         continue
     
     else:
