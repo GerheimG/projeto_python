@@ -8,8 +8,8 @@ os.system('cls')
 
 soma = 0
 
-for num in range(0, 101):
+for i in range(0, 101):
 
-    if (num % 2 == 0):
-        soma += num
+    if (i % 2 == 0):
+        soma += i
         print(f'{soma}', end= " | ")

@@ -8,18 +8,18 @@ os.system('cls')
 inicio = int(input('Insira um valor para iniciar: '))
 fim = int(input('Insira um valor para terminar: '))
 
-for num in range(inicio, fim):
+for i in range(inicio, fim):
 
-    if num == 17:
+    if i == 17:
         continue
     
-    elif num == 23:
+    elif i == 23:
         continue
     
-    elif num == 38:
+    elif i == 38:
         continue
 
-    print(num)
+    print(i)
         
 
     

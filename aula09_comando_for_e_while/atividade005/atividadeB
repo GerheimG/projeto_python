@@ -8,5 +8,5 @@ os.system('cls')
 inicio = int(input('Escolha por onde irá começar a contagem: '))
 fim = int(input('Escolha por onde irá terminar a contagem: '))
 
-for numero in range(inicio, fim):
-    print(f'{numero}', end= " | ")
+for i in range(inicio, fim):
+    print(f'{i}', end= " | ")

@@ -22,4 +22,4 @@ while (True):
     
     else:
         print(f'Bem vindo {usuario}')
-        exit()
+        break
