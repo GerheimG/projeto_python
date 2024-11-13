@@ -6,12 +6,19 @@ import os
 
 os.system('cls')
 
-frase = input('Insira uma frase ou nome: ').lower().strip()
+print('APERTE "')
 
-invertida = frase[::-1]
+while True:
+    frase = input('Insira uma frase ou nome: ').lower().strip()
 
-if frase == invertida:
-    print('É um palíndromo')
+    invertida = frase[::-1]
     
-else:
-    print('Não é umpalíndromo')
+    if frase == 's':
+        break
+
+
+    if frase == invertida:
+        print('É um palíndromo')
+        
+    else:
+        print('Não é umpalíndromo') 
