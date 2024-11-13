@@ -1,0 +1,19 @@
+# Crie um programa que realiza a contagem de 1 até 100, usando apenas de números ímpares, 
+# ao final do processo exiba na tela quantos números ímpares foram encontrados nesse intervalo, assim como a soma dos mesmos.
+
+import os
+
+
+os.system('cls')
+
+
+soma = 0
+
+for num in range(1, 101):
+    if (num % 2 == 0):
+        continue
+    
+    else:
+        print(f'{num}', end= " | ")
+        soma += num
+        print(soma)
