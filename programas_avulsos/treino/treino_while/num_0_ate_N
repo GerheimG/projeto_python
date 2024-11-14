@@ -7,12 +7,10 @@ os.system('cls')
 
 contador = 1
 
-limite = int(input('Defina o limite: '))
+limite = int(input('Insira o limite: '))
 
-
-while contador > limite:
-    contador += 1
-
-
+while contador <= limite:
     print(contador)
+
+    contador += 1
     
