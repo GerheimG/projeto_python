@@ -7,7 +7,7 @@ fim = int(input('Selecione um para terminar: '))
 
 
 for num in range(inicio, fim + 1):
-    for multi in range(inicio, fim + 1):
+    for multi in range(1, 10):
         total = num * multi
              
         print(total, end= ' ')
