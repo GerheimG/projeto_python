@@ -19,6 +19,10 @@ ordem = input(
     'Digite "asc" para ordem ascendente ou "desc"'
     'para ordem descendente: ').strip().lower()
 
+
+# Exibe a lista fornecida para referência 
+print('Lista fornecida:', numeros)
+
 # Verifica a escolha do usuário e ordena a lista de acordo 
 if ordem == 'asc':
     numeros.sort()
@@ -29,5 +33,4 @@ elif ordem == 'desc':
 else:
     print('Opção inválida! A lista não foi ordenada.')
 
-# Exibe a lista fornecida para referência 
-print('Lista fornecida:', numeros)
+

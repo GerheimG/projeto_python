@@ -14,18 +14,17 @@ numeros = []
 for num_str in numeros_str:
     numeros.append(int(num_str))
 
-# Solicita ao usuário para decedir se deseja 
-# criar uma cópia da lista 
-escolha = input('Deseja criar uma cópia? (s/n): ').strip().lower()
+# Solicita ao usuário para decidir se deseja limpar a lista 
+escolha = input('Deseja limpar a lista/ (s/n): ').strip().lower()
+
 
 # Exibe a lista fornecida para referência 
 print(f'Lista fornecida: {numeros}')
 
-# Verfica a escolha do usuário e cria uma cópia da
-# lista se a resposta for 's'
+# Verifica a escolha do usuário e limpa se a resposta for 's'
 if escolha == 's':
-    lista_copiada = numeros.copy()
-    print(f'Cópia da lista: {lista_copiada}')
+    numeros.clear()
+    print(f'Lista limpa:', numeros)
 else:
-    print('A lista não foi copiada.')
+    print('A lista não foi limpa.') 
 
