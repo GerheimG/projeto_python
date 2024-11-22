@@ -1,0 +1,15 @@
+# Faça um programa que preencha uma lista com 50 números aleatórios. Depois fatie essa lista em 5 listas de 10 elementos.
+
+import os
+import random
+
+
+os.system('cls')
+
+random.randint(1,50)
+
+lista = []
+
+lista.append(random.randint)
+
+print(lista)
