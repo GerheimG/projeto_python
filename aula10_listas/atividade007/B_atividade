@@ -6,10 +6,24 @@ import random
 
 os.system('cls')
 
-random.randint(1,50)
+
 
 lista = []
 
-lista.append(random.randint)
+for num in range(1,50):
+    numeros = random.randint(1,100)
+    lista.append(numeros)
 
-print(lista)
+lista1 = lista[0:10]
+lista2 = lista[10:20]
+lista3 = lista[20:30]
+lista4 = lista[30:40]
+lista5 = lista[40:50]
+
+
+print(f'Lista original', lista)
+print(lista1)
+print(lista2)
+print(lista3)
+print(lista4)
+print(lista5)

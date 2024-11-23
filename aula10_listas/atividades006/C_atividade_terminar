@@ -6,3 +6,33 @@
 # • Os múltiplos de 2, 3 e 4
 # • Lista reversa
 # • O produto dos intervalos 5-6 por 11-12
+
+import os 
+
+
+os.system('cls')
+
+pares = []
+impar = []
+multiplos = []
+
+lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+
+primeiro_intervalo = lista_numeros[0:9]
+segundo_intervalo = lista_numeros[7:13]
+
+for lista_numeros in lista_numeros:
+    par = int(lista_numeros)
+    if par % 2 == 0:
+        pares.append(par)
+    else:
+        impar.append(par)
+        
+
+
+
+print(primeiro_intervalo)
+print(segundo_intervalo)
+print(pares)
+print(impar)
