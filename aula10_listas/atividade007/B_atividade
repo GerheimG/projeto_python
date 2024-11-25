@@ -21,9 +21,9 @@ lista4 = lista[30:40]
 lista5 = lista[40:50]
 
 
-print(f'Lista original', lista)
-print(lista1)
-print(lista2)
-print(lista3)
-print(lista4)
-print(lista5)
+print('Lista original', lista)
+print('Primeira lista:', lista1)
+print('Segunda lista:', lista2)
+print('Terceira lista:', lista3)
+print('Quarta lista:', lista4)
+print('Quinta lista:', lista5)
