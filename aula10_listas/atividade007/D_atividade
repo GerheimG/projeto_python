@@ -5,7 +5,7 @@ import os
 
 os.system('cls')
 
-lista = ['Guilherme', 'Laura', 'Bruno', 'João', 'Lucão']
+lista = ['Guilherme', 'Laura', 'Bruno', 'João', 'Lucão', 'Claudyney']
 
 print(lista)
 if 'Pedro' not in lista:
