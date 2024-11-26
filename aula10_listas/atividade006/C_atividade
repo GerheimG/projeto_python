@@ -48,5 +48,3 @@ print('Lista reversa:\n', lista_reversa)
 print('-' * 60)
 print('O produto dos intervalos 5-6 por 11-12:\n',produto)
 print('=' * 60)
-
-
