@@ -1,0 +1,102 @@
+# Trabalho sobre a estrutura de dados de SET
+# Senac Minas / Juiz de Fora 
+# Aluno: Guilherme Gerheim
+# Turma: 0392
+# Ano: 2024
+
+# Catalogo de jogo
+
+import os
+
+
+os.system('cls')
+
+
+catalogo = set()
+catalogo2 = set()
+
+print('-' * 50)
+print('APERTA S PARA SAIR')
+print('-' * 50)
+
+while True:
+    jogos = input('Insira os jogos do seu catalogo: ')
+    print('-' * 50)
+    if jogos == 's':
+        print('Saindo')
+        break       
+    catalogo.add(jogos)
+
+
+while True:
+    jogos = input('Insira os jogos de sua outra loja: ')
+    print('-' * 50)
+    if jogos == 's':
+        print('Saindo')
+        break       
+    catalogo2.add(jogos)
+
+print('Catalogo loja 1:', catalogo)
+print()
+print('Catalogo loja 2:', catalogo2)
+print()
+
+while True:
+    print('-' * 50)
+    entra = input('Quer remover algum jogo da primeira loja?(s/n)').lower().strip()
+    print('-' * 50)
+    if entra == 's':
+        remover = input('Insira o nome do jogo: ')
+        catalogo.discard(remover)
+        continue
+    else:
+        entra == 'n'
+        break
+
+while True:
+    print('-' * 50)
+    entra = input('Quer remover algum jogo da segunda loja?(s/n)').lower().strip()
+    print('-' * 50)
+    if entra == 's':
+        remover = input('Insira o nome do jogo: ')
+        catalogo2.discard(remover)
+        continue
+    else:
+        entra == 'n'
+        break
+
+print('Catalogo loja 1 depois da remoção:', catalogo)
+print()
+print('Catalogo loja 2 depois da remoção:', catalogo2)
+print()
+
+
+igual = catalogo.intersection(catalogo2)
+print('Aqui está os jogos presentes em ambas as lojas:', igual)
+print()
+
+
+uniao = catalogo.union(catalogo2)
+print('Aqui está o catalogo das lojas juntas:', uniao)
+
+while True:
+    limpar = input('Deseja limpar a primeira loja? (s/n)')
+    if limpar == 's':
+        catalogo.clear()
+        print('Aqui está a loja depois da limpeza:', catalogo)
+        continue
+    else:
+        limpar == 'n'
+        print(catalogo)
+        break
+
+while True:
+    limpar = input('Deseja limpar a segunda loja? (s/n)')
+    if limpar == 's':
+        catalogo2.clear()
+        print('Aqui está a loja depois da limpeza:', catalogo2)
+        continue
+    else:
+        limpar == 'n'
+        print(catalogo2)
+        break
