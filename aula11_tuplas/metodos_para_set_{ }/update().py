@@ -1,6 +1,6 @@
 import os
 
-os.sysetm('cls')
+os.system('cls')
 
 # Criando um conjunto inicial
 conjunto = {1, 2, 3}
