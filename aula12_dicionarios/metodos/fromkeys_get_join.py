@@ -21,7 +21,7 @@ while True:
 
     if opcao == '1':
         # Criação de um dicionário usando fromkeys()
-        chaves = input('Digite as chaves separadas por vírgula: ').split(',')
+        chaves = input('Digite as chaves separadas por vírgula: ')
         valor_padrao = input('Digite o valor padrão para as chaves: ')
 
         if not chaves or not valor_padrao:
