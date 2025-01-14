@@ -48,5 +48,3 @@ while True:
     elif resposta == '5':
         print('Saindo.')
         break
-                
-                

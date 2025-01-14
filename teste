@@ -1,1 +1,17 @@
-aaaaaaa
+while True:
+        pergun = input('Deseja alterar alguma info? S/N: ')
+
+        if pergun == 'S':
+            item_alterar = ('Qual livro?: ').lower()
+
+            if item_alterar in livros_dic:
+                subitem = input('Qual informação irá alterar: ').lower().strip()
+
+                if subitem in livros_dic[item_alterar]:
+                    atualizar = input('Digite a alteração: ')
+
+                    if subitem == 'ano':
+                        atualizar = int(atualizar)
+                    
+                    if subitem == 'páginas':
+                        atualizar = int(atualizar)
