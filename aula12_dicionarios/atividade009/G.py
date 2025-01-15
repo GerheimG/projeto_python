@@ -34,7 +34,7 @@ while True:
     
     elif resposta == '3':
 
-         while True:
+        while True:
             valor_excluir = input('Digite o valor para excluir: ').strip().lower()
             del dados[valor_excluir]
             print(dados)

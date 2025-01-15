@@ -14,18 +14,22 @@ for l in range(1,4):
     num_pag = int(input('Insira o número de páginas: '))
     print('=' * 70)
 
-    if num_pag > 300:
-    
-        contagem_pag =+ 1
-    
-    if autor == 'j.k rolling':
-
-        contagem_autor =+ 1
-
     livros_dic[titulo] = {'titulo' : titulo ,'autor' : autor, 'ano': ano_publi,
                         'páginas': num_pag}
     print(livros_dic)
-    
+
+muitas_pag = 0
+mesmo_autor = 0
+
+
+for keys, values in livros_dic.items():
+    if values['páginas'] >= 300:
+        muitas_pag += 1
+
+for keys, values in livros_dic.items():
+    if values['autor'] == 'j.k rolling':
+        mesmo_autor += 1
+
 while True:
     pergun = input('Deseja alterar algo? S/N: ').upper()
 
@@ -45,17 +49,7 @@ while True:
                     atualizar = int(atualizar)
                 
                 livros_dic[item_alterado][subitem_alterar] = atualizar
-                
-                ordem = sorted(livros_dic)
-                
-                print('=' * 70)
-                print('Lista livros', livros_dic)
-                print('=' * 70)
-                print('Livros com mais de 300 páginas', contagem_pag)
-                print('=' * 70)
-                print('Livros com o autor J.K Rolling', contagem_autor)
-                print('=' * 70)
-                print('Lista de livros em ordem', ordem)
+
         
         else:
             print('Esse livro não está cadastrado')
@@ -65,11 +59,11 @@ while True:
         print('=' * 70)
         print('Lista livros', livros_dic)
         print('=' * 70)
-        print('Livros com mais de 300 páginas', contagem_pag)
+        print('Livros com mais de 300 páginas', muitas_pag)
         print('=' * 70)
-        print('Livros com o autor J.K Rolling', contagem_autor)
+        print('Livros com o autor J.K Rolling', mesmo_autor)
         print('=' * 70)
-        ordem = sorted(livros_dic)
-        print('Lista de livros em ordem', ordem)
-
-            
+        ordem = sorted(livros_dic.values(), key= lambda x: (x['titulo']))
+        for titulo in ordem:
+            print('Lista dos livros em ordem', titulo['titulo'])
+        break

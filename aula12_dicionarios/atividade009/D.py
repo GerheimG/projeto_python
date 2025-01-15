@@ -5,23 +5,26 @@ os.system('cls')
 
 dicionario_vinho = {}
 
-for vinhos in range(1, 2):
+
+for vinhos in range(1, 3):
     numero = input('Insira o número do vinho: ')
     tipo = input('Tipo do vinho: ')
     teor = float(input('Insira o teor alcoólico: '))
     safra = int(input('Insira a safra: '))
 
-    if safra > 2015:
-         contagems = 0
-
-         contagems =+ 1
-
-    if teor > 12:
-        contagemt = 0
-        
-        contagemt =+ 1
-
     dicionario_vinho[numero] = {'tipo' : tipo, 'teor' : teor, 'safra' : safra}
+
+alcool_alto = 0
+safra_nova = 0
+
+for keys, values in dicionario_vinho.items():
+    if values['teor'] >= 12:
+        alcool_alto += 1
+
+for keys, values in dicionario_vinho.items():
+    if values['safra'] >= 2015:
+        safra_nova += 1
+
 
 print(dicionario_vinho)
 
@@ -54,7 +57,7 @@ while True:
 print('=' * 70)
 print('Dicionário', dicionario_vinho)
 print('=' * 70)
-print('Vinhos com teor acima de 12:', contagemt)
+print('Vinhos com teor acima de 12:', alcool_alto)
 print('=' * 70)
-print('Vinhos da safra de 2015 pra cima:', contagems)
+print('Vinhos da safra de 2015 pra cima:', safra_nova)
 print('=' * 70) 
