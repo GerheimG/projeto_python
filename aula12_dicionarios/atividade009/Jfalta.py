@@ -10,6 +10,6 @@ for i in range(1,2):
     nome_part = input('Nome participante: ')
     email = input('Email participante: ')
     data = input('Insira a data: ')
-    localizacao =input('Preço do produto: ')
+    localizacao =input('Insira a localização: ')
 
     evento[nome]
