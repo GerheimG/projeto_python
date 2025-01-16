@@ -42,8 +42,8 @@ while True:
             break
     
     elif resposta == '4':
-        print('Nome:', dados['nome'])
-        print('Altura:', dados['altura'])
+        print(dados['nome'])
+        print(dados['altura'])
 
     elif resposta == '5':
         print('Saindo.')

@@ -13,6 +13,7 @@ for i in range(1,2):
     produtos[nome] = {'nome' : nome, 'preço' : preco, 'categoria' : categoria}
 
 
+
 while True:
     pergun = input('Deseja alterar algo? S/N: ').upper()
 

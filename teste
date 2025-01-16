@@ -1,9 +1,0 @@
- print('OPÇÕES')
-        print('1 - Alterar titulo')
-        print('2 - Alterar genero')
-        print('3 - Alterar duração')
-        print('4 - Alterar classificação')
-        
-        escolha = int(input('Escolha uma das opções acima: '))
-
-        if escolha == 1:
