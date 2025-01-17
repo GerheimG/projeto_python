@@ -1,14 +1,14 @@
 import os
 
+from datetime import datetime
 
 os.system('cls')
 
 viagens = {}
 
+for i in range(1,2):
+    destino = input('Insira o destino: ')
+    duracao = input('Insira a duração: ')
+    data = input('Insira a data')
+    vaga = int(input(''))
 
-while True:
-    print('1. Alterar dado de uma viagem.')
-    print('2. relatório.')
-    print('3. Sair.')
-
-    opcao = input('Escolha alguma opção: ')

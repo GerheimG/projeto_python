@@ -14,16 +14,7 @@ for vinhos in range(1, 3):
 
     dicionario_vinho[numero] = {'tipo' : tipo, 'teor' : teor, 'safra' : safra}
 
-alcool_alto = 0
-safra_nova = 0
 
-for keys, values in dicionario_vinho.items():
-    if values['teor'] >= 12:
-        alcool_alto += 1
-
-for keys, values in dicionario_vinho.items():
-    if values['safra'] >= 2015:
-        safra_nova += 1
 
 
 print(dicionario_vinho)
@@ -47,6 +38,16 @@ while True:
                 dicionario_vinho[item_alterado][subitem_alterado] = atualizacao
                 print(dicionario_vinho)
 
+                alcool_alto = 0
+                safra_nova = 0
+
+                for keys, values in dicionario_vinho.items():
+                    if values['teor'] >= 12:
+                        alcool_alto += 1
+
+                for keys, values in dicionario_vinho.items():
+                    if values['safra'] >= 2015:
+                        safra_nova += 1
 
             else:
                 print('Esse item não esta disponivel')

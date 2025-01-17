@@ -18,17 +18,6 @@ for l in range(1,4):
                         'páginas': num_pag}
     print(livros_dic)
 
-muitas_pag = 0
-mesmo_autor = 0
-
-
-for keys, values in livros_dic.items():
-    if values['páginas'] >= 300:
-        muitas_pag += 1
-
-for keys, values in livros_dic.items():
-    if values['autor'] == 'j.k rolling':
-        mesmo_autor += 1
 
 while True:
     pergun = input('Deseja alterar algo? S/N: ').upper()
@@ -49,6 +38,18 @@ while True:
                     atualizar = int(atualizar)
                 
                 livros_dic[item_alterado][subitem_alterar] = atualizar
+
+                muitas_pag = 0
+                mesmo_autor = 0
+
+
+                for keys, values in livros_dic.items():
+                    if values['páginas'] >= 300:
+                        muitas_pag += 1
+
+                for keys, values in livros_dic.items():
+                    if values['autor'] == 'j.k rolling':
+                        mesmo_autor += 1
 
         
         else:

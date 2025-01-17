@@ -30,24 +30,24 @@ while True:
                 alteracao = input('Digite a alteração: ').strip().lower()
             
             else:
-              print('Esse item não existe.')
+                print('Esse item não existe.')
 
         else:
-          print('Esse item não existe.')
+            print('Esse item não existe.')
 
-          produtos_dict[item_alterar][alterar] = alteracao
+            produtos_dict[item_alterar][alterar] = alteracao
     
     elif opcao == '2':
-       deletar = input('Qual item vai apagar: ')
-       if deletar in produtos_dict:
-          del produtos_dict[deletar]
+        deletar = input('Qual item vai apagar: ')
+        if deletar in produtos_dict:
+            del produtos_dict[deletar]
     
     elif opcao == '3':
-       print('Saindo')
-       break
+        print('Saindo')
+        break
     
     else:
-       print('Digite alguma das opções.')
+        print('Digite alguma das opções.')
 
 produtos_em_ordem = sorted(produtos_dict.items(), key= lambda x: x[1])
 

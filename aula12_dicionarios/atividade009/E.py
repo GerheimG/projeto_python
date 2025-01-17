@@ -13,15 +13,7 @@ for alunos in range(1, 3):
     dicionario_alunos[matricula] = {'matricula': matricula, 'nome' : nome,
                     'nascimento' : datanasci}
 
-doismil = 0
-impar_matri = 0
 
-for keys, values in dicionario_alunos.items():
-    if datanasci >= 2000:
-        doismil += 1
-
-if matricula % 2 != 0:
-    impar_matri += 1
 
 while True:
     print('OPÇÕES')
@@ -45,6 +37,16 @@ while True:
                     atualizar = int(atualizar)
                 
                 dicionario_alunos[item_alterado][subitem_alterar] = atualizar
+
+                doismil = 0
+                impar_matri = 0
+
+                for keys, values in dicionario_alunos.items():
+                    if datanasci >= 2000:
+                        doismil += 1
+
+                if matricula % 2 != 0:
+                    impar_matri += 1
 
     elif resposta == '2':
         aluno_sele = int(input('Insira o número de matricula: '))

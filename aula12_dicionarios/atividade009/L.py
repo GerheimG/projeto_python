@@ -56,9 +56,9 @@ while True:
         print('=' * 70)
         print('Lista de filmes', filmes)
         print('=' * 70)
-        print('Livros com mais de 2 horas: ',muitas_horas )
+        print('Filmes com mais de 2 horas: ',muitas_horas )
         print('=' * 70)
-        print('Livros com a classificação livre: ', livre)
+        print('Filmes com a classificação livre: ', livre)
         print('=' * 70)
         ordem = sorted(filmes.values(), key= lambda x: (x['titulo']))
         for titulo in ordem:
