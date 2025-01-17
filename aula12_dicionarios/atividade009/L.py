@@ -4,7 +4,7 @@ import os
 os.system('cls')
 
 filmes = {}
-muitas_horas = 0 
+
 
 for i in range(1,2):
     titulo = input('Insira o titulo da obra: ').lower()
@@ -12,16 +12,11 @@ for i in range(1,2):
     duracao = int(input('Duração do filme(minutos): '))
     classificacao = (input('Classificação Indicativa: ')).lower()
 
-    if duracao > 120:
-        muitas_horas += 1
 
     filmes[titulo] = {'titulo' : titulo, 'genero' : genero, 
-            'duração' : duracao, 'Classificação indicativa' : classificacao}
+            'duração' : duracao, 'classificação' : classificacao}
 
-livre = 0
-for keys, values in filmes.items():
-    if values['Classificação indicativa'] == 'livre':
-        livre += 1
+
 
 while True:
     pergun = input('Deseja alterar algo?: ').upper()
@@ -35,7 +30,7 @@ while True:
             if subitem_alterado in filmes[item_alterado]:
                 atualizar = input('Digite a alteração: ')
 
-                if subitem_alterado == 'duracao':
+                if subitem_alterado == 'duração':
                     atualizar = int(atualizar)
                 
                 if subitem_alterado == 'classificacao':
@@ -45,6 +40,16 @@ while True:
                 
         else:
             print('Esse item não esta disponivel')
+
+        livre = 0
+        for keys, values in filmes.items():
+            if values['classificação'] == 'livre':
+                livre += 1
+        
+        muitas_horas = 0 
+        for keys, values in filmes.items():
+            if values['duração'] > 120:
+                muitas_horas += 1
 
     elif pergun == 'N':
         print('Encerrando o programa..')
