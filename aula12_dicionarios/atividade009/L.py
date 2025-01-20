@@ -41,6 +41,9 @@ while True:
         else:
             print('Esse item não esta disponivel')
 
+        
+
+    elif pergun == 'N':
         livre = 0
         for keys, values in filmes.items():
             if values['classificação'] == 'livre':
@@ -50,8 +53,7 @@ while True:
         for keys, values in filmes.items():
             if values['duração'] > 120:
                 muitas_horas += 1
-
-    elif pergun == 'N':
+                
         print('Encerrando o programa..')
         print('=' * 70)
         print('Lista de filmes', filmes)
@@ -60,7 +62,7 @@ while True:
         print('=' * 70)
         print('Filmes com a classificação livre: ', livre)
         print('=' * 70)
-        ordem = sorted(filmes.values(), key= lambda x: (x['titulo']))
+        ordem = sorted(filmes.values(), key= lambda titulo: titulo['titulo'])
         for titulo in ordem:
             print('Lista de filmes em ordem: ' ,titulo['titulo'])
         break
