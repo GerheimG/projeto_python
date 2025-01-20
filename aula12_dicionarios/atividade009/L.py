@@ -19,9 +19,9 @@ for i in range(1,2):
 
 
 while True:
-    pergun = input('Deseja alterar algo?: ').upper()
+    pergunta = input('Deseja alterar algo?: ').upper()
 
-    if pergun == 'S':
+    if pergunta == 'S':
         item_alterado = input('Digite o titulo do filme: ').lower()
 
         if item_alterado in filmes:
@@ -43,7 +43,7 @@ while True:
 
         
 
-    elif pergun == 'N':
+    elif pergunta == 'N':
         livre = 0
         for keys, values in filmes.items():
             if values['classificação'] == 'livre':
