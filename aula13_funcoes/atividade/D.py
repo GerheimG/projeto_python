@@ -13,7 +13,7 @@ def temperatura(fahrenheit):
     celsius = (fahrenheit - 32) / 9 * 5 
     return celsius
 
-fahrenheit = int(input('Insira a temperatura em fahrenheit: '))
+fahrenheit = float(input('Insira a temperatura em fahrenheit: '))
 
 # Invocando a função
 temp_celsius = temperatura(fahrenheit)
