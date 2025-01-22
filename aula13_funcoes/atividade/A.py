@@ -14,13 +14,13 @@ def listar_numero(numero):
     
     lista_par = []
     lista_impar = []
-
+    # Descobrir quais são pares ou ímpares
     for n in lista:
         if n % 2 == 0:
             lista_par.append(n)
         else:
             lista_impar.append(n)
-
+        # Contando os pares e ímpares
         quantidade_par = len(lista_par)
         quantidade_impar = len(lista_impar)
     
@@ -32,6 +32,7 @@ lista = (1,2,3,4,5,6,7,8,9,10)
 # Chamando a função
 lista_par, lista_impar, quantidade_par, quantidade_impar = listar_numero(lista)
 
+# Saída
 print('Lista de números pares', lista_par)
 print('Quantidade de pares:', quantidade_par)
 print('Lista de números ímpares', lista_impar)

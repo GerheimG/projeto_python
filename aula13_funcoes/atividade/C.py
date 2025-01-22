@@ -22,15 +22,15 @@ for n in range(2):
     matricula = int(input('Insira o número de matrícula: '))
     data = input('Insira a data de nascimento: ')
 
-
+    # Colocando dentro da lista
     aluno_cadastro = aluno(nome,matricula,data)
     alunos_lista.append(aluno_cadastro)
 
 print(alunos_lista)
 
-cadastro = aluno(nome,matricula,data)
 
 pergunta = input('Qual aluno irá verificar: ').capitalize().strip()
+# Verificando se o aluno está na lista
 for n in alunos_lista:
     if n['Nome'].capitalize() == pergunta.capitalize():
         print('Nome: ',n['Nome'])
