@@ -10,3 +10,7 @@ import os
 
 
 os.system('cls')
+
+numero = int(input('Escolha um número maior que 0 e menor que 11: '))
+if numero > 11:
+    print('Digite um número menor que 11')
