@@ -11,44 +11,72 @@ import os
 os.system('cls')
 
 
-clientes_dict = {}
+lista_clientes = []
 
-clientes_lista = []
+def cadastrar_clientes():  
+    while True:
+        # Pegando as informações
+        print('Para parar digite 0')
+        codigo = int(input('Digite o código: '))
+        if codigo == 0:
+            break
+        nome = input('Digite o nome: ')
+        altura = float(input('Digite a altura: '))
+        peso = float(input('Digite o peso: '))
+        pergunta = input('Deseja continuar? S para continuar ou 0 para sair: ').upper()
 
+        # Dicionario 
+        registro = {}
+        registro['Código'] = codigo
+        registro['Nome'] = nome
+        registro['Altura'] = altura
+        registro['Peso'] = peso
 
-def clientes(codigo,nome,altura,peso):
-    return {'Código': codigo,'Nome': nome,'Altura': altura, 'Peso': peso}
+        
+            
+        # Colocando o dicionario dentro da lista
+        lista_clientes.append(registro)
+        
+        # Limpa a tela a cada cadastro
+        os.system('cls')
 
+        # Exibe todos os clientes cadastrados até o momento
+        print('Clientes cadastrados até o momento:')
+        for clientes in lista_clientes:
+            print('Código:', clientes['Código'])
+            print('Nome:', clientes['Nome'])
+            print('Altura:', clientes['Altura'])
+            print('Peso:', clientes['Peso'])
+            print('=' * 60)
+        
+        # Caso a pessoa escolha sair
+        if pergunta != 'S':
+            break
 
-while True:
-    # Recebendo informações
-    print('Para parar digite 0')
-    codigo = int(input('Digite seu código: '))
-    nome = input('Digite seu nome: ')
-    altura = float(input('Digite sua altura: '))
-    peso = float(input('Digite seu peso: '))
-    pergunta = input('Deseja continuar? S para continuar ou 0 para sair: ')
+def calcular_media_peso(lista_clientes):
+    # Somando todos os pesos
+    somar_peso = sum(cliente['Peso'] for cliente in lista_clientes)
+    # Calculando a média
+    media = somar_peso / len(lista_clientes)
+    return media
 
-    if pergunta == 'S':
-        os.system('cls')  # Limpar a tela para o próximo cadastro
-        continue
-    if pergunta == '0':
-        break
+def calcular_media_altura(lista_clientes):
+    # Somando todas as alturas
+    somar_altura = sum(cliente['Altura'] for cliente in lista_clientes)
+    # Calculando a média
+    media = somar_altura / len(lista_clientes)
+    return media
 
-    # Colocando dentro da lista
-    clientes_cadastro = clientes(codigo,nome,altura,peso)
-    clientes_lista.append(clientes_cadastro)
+# Chamando funções
+cadastrar_clientes()
 
-def calcular_media_peso():
-    somar_pesos = sum(clientes_dict['Peso'] for cliente in clientes_dict)
-    media_peso = somar_pesos / len(clientes_lista)
-    return media_peso
+# Calculando a média de peso após os cadastros
+if lista_clientes:
+    media_peso = calcular_media_peso(lista_clientes)
+    print(f'A média de peso dos clientes é: {media_peso:.2f} kg')
 
-media_peso = calcular_media_peso()
+# Calculando a média de peso após os cadastros
+if lista_clientes:
+    media_altura = calcular_media_altura(lista_clientes)
+    print(f'A média de altura dos clientes é: {media_altura:.2f} m')
 
-print(clientes_lista)
-print(media_peso)
-
-
-# media_altura = somar_altura / len(clientes_dict)
-# somar_altura = sum(clientes_dict['Altura'] for n in clientes_dict)
