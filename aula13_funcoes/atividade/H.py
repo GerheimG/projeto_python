@@ -19,6 +19,7 @@ clientes_lista = []
 def clientes(codigo,nome,altura,peso):
     return {'Código': codigo,'Nome': nome,'Altura': altura, 'Peso': peso}
 
+
 while True:
     # Recebendo informações
     print('Para parar digite 0')
@@ -26,17 +27,28 @@ while True:
     nome = input('Digite seu nome: ')
     altura = float(input('Digite sua altura: '))
     peso = float(input('Digite seu peso: '))
-    pergunta = input('Deseja continuar: S ou 0 ')
-    
+    pergunta = input('Deseja continuar? S para continuar ou 0 para sair: ')
 
+    if pergunta == 'S':
+        os.system('cls')  # Limpar a tela para o próximo cadastro
+        continue
+    if pergunta == '0':
+        break
 
     # Colocando dentro da lista
     clientes_cadastro = clientes(codigo,nome,altura,peso)
     clientes_lista.append(clientes_cadastro)
 
-    if pergunta == 'S':
-        os.system('cls')
-        continue
-    if pergunta == '0':
-        print(clientes_lista)
-        break
+def calcular_media_peso():
+    somar_pesos = sum(clientes_dict['Peso'] for cliente in clientes_dict)
+    media_peso = somar_pesos / len(clientes_lista)
+    return media_peso
+
+media_peso = calcular_media_peso()
+
+print(clientes_lista)
+print(media_peso)
+
+
+# media_altura = somar_altura / len(clientes_dict)
+# somar_altura = sum(clientes_dict['Altura'] for n in clientes_dict)
