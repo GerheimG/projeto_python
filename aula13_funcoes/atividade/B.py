@@ -8,17 +8,28 @@ import os
 
 os.system('cls')
 
-def aluno(nome,matricula,data):
-    return nome, matricula, data
 
-# Recebendo os dados do aluno
-nome = input('Insira o nome do aluno: ')
-matricula = int(input('Insira o número de matrícula: '))
-data = input('Insira a data de nascimento: ')
+alunos_lista = []
 
-# Chamando a função para cadastrar o aluno
-cadastro = aluno(nome, matricula, data)
+def aluno():
+    dicionario = {}
+    
+    # Recebendo os dados do aluno
+    nome = input('Insira o nome do aluno: ')
+    matricula = int(input('Insira o número de matrícula: '))
+    data = input('Insira a data de nascimento (dd/mm/yy):  ')
 
-# Saída com FOR
-for i in cadastro:
-    print(i)
+    dicionario['Nome'] = nome
+    dicionario['Matricula'] = matricula
+    dicionario['Data'] = data
+
+    alunos_lista.append(dicionario)
+
+    return dicionario
+
+cadastro = aluno()
+
+for i in alunos_lista:
+    print('Nome:',i['Nome'])
+    print('Matricula:',i['Matricula'])
+    print('Data:',i['Data'])
