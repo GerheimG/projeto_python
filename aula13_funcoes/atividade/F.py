@@ -13,19 +13,15 @@ os.system('cls')
 
 def receber_dicionario(lista_1, lista_2):
     dicionario = {}
-    
+    for keys, valeus in zip(lista_1, lista_2):
+        dicionario[keys] = valeus 
 
     return dicionario
 
-
 lista_1 = ['nome', 'peso', 'idade']
 lista_2 = ['john', 40, 18]
-
 
 dicionario = receber_dicionario(lista_1, lista_2)
 
 for i, j in dicionario.items():
     print(f'{i}: {j}')
-
-
-
