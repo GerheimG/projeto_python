@@ -50,7 +50,7 @@ while True:
         os.system('cls')
         continue
 
-    if a > 0 and a < 11 and b > 0 and b < 11:
+    else:
         os.system('cls')
         break
 
