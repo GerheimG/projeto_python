@@ -79,4 +79,3 @@ if lista_clientes:
 if lista_clientes:
     media_altura = calcular_media_altura(lista_clientes)
     print(f'A média de altura dos clientes é: {media_altura:.2f} m')
-
