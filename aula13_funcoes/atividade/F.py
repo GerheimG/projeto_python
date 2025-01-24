@@ -23,5 +23,5 @@ lista_2 = ['john', 40, 18]
 
 dicionario = receber_dicionario(lista_1, lista_2)
 
-for i, j in dicionario.items():
-    print(f'{i}: {j}')
+for chave, valor in dicionario.items():
+    print(f'{chave}: {valor}')
