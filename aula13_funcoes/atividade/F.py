@@ -11,21 +11,21 @@ import os
 
 os.system('cls')
 
-lista_livre = []
-dicio = {}
+def receber_dicionario(lista_1, lista_2):
+    dicionario = {}
+    
 
-def listas(lista_1, lista_2):
-
-    nome = input('Insira o nome: ')
-    peso = float(input('Insira seu peso: '))
-    idade = int(input('Insira sua idade: '))
-
-    lista_1 = [nome, peso, idade ]
-    lista_2 = ['John', 40, 18]
-
-    return {'Nome': nome, 'Peso': peso, 'Idade': idade}
+    return dicionario
 
 
+lista_1 = ['nome', 'peso', 'idade']
+lista_2 = ['john', 40, 18]
+
+
+dicionario = receber_dicionario(lista_1, lista_2)
+
+for i, j in dicionario.items():
+    print(f'{i}: {j}')
 
 
 
