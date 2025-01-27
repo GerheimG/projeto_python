@@ -18,7 +18,7 @@ def receber_dicionario(lista_1, lista_2):
 
     return dicionario
 
-lista_1 = ['nome', 'peso', 'idade']
+lista_1 = ['Nome', 'Peso', 'Idade']
 lista_2 = ['john', 40, 18]
 
 dicionario = receber_dicionario(lista_1, lista_2)

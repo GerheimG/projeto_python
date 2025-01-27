@@ -23,7 +23,8 @@ def cadastrar_clientes():
         nome = input('Digite o nome: ')
         altura = float(input('Digite a altura: '))
         peso = float(input('Digite o peso: '))
-        pergunta = input('Deseja continuar? S para continuar ou 0 para sair: ').upper()
+        pergunta = input('Deseja continuar? S para '
+                'continuar ou 0 para sair: ').upper()
 
         # Dicionario 
         registro = {}
@@ -31,9 +32,8 @@ def cadastrar_clientes():
         registro['Nome'] = nome
         registro['Altura'] = altura
         registro['Peso'] = peso
-
         
-            
+        
         # Colocando o dicionario dentro da lista
         lista_clientes.append(registro)
         
