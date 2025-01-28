@@ -1,0 +1,1 @@
+# Função que encontra o elemento mais frequente em uma lista.
