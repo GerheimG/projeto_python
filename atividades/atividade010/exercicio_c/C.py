@@ -12,5 +12,5 @@ os.system('cls')
 
 alunos_lista = []
 
-resultado = aluno(alunos_lista)
-aluno = verificar_aluno(alunos_lista)
+resultado = aluno()
+aluno = verificar_aluno(resultado)
