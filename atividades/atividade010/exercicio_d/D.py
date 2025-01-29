@@ -2,16 +2,10 @@
 # em fahrenheit e retorne o valor em graus célsius.
 
 import os
-
+from temperatura.calculo_temperatura import temperatura
 
 os.system('cls')
 
-
-# Definindo a função
-def temperatura(fahrenheit):
-    # Convertendo fahrenheit para celsius
-    celsius = (fahrenheit - 32) / 9 * 5 
-    return celsius
 
 fahrenheit = int(input('Insira a temperatura em fahrenheit: '))
 

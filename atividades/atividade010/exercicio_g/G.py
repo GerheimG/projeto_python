@@ -7,34 +7,12 @@
 # os resultados das operações, imprimindo os resultados na tela.
 
 import os
-
+from matematica_basica import somar, subtrair, multiplicar, dividir
+from matematica_basica import divisao_inteira, resto_divisao
 
 os.system('cls')
 
 
-def somar(a, b):
-    soma = a + b
-    return soma
-
-def subtrair(a, b):
-    subtrai = a - b
-    return subtrai
-
-def multiplicar(a, b):
-    produto = a * b
-    return produto
-
-def dividir(a, b):
-    divisao = a / b
-    return divisao
-
-def dividir_inteiro(a, b):
-    divisao_inteira = a // b
-    return divisao_inteira
-
-def resto_divisao(a, b):
-    resto = a % b
-    return resto
 
 while True:
     a = float(input('Escolha o valor A, maior que 0 e menor que 11: '))
@@ -65,19 +43,19 @@ print('6 - Resto da divisão')
 opcao = int(input('Escolha 1 ao 6: '))
 
 if opcao == 1:
-    print(f'A soma de {a} e {b} é: {somar(a,b):.2f} ')
+    print(f'A soma de {a} e {b} é: {somar.somar(a,b):.2f} ')
 
 elif opcao == 2:
-    print(f'A subtração de {a} e {b} é: {subtrair(a,b):.2f} ')
+    print(f'A subtração de {a} e {b} é: {subtrair.subtrair(a,b):.2f} ')
 
 elif opcao == 3:
-    print(f'O produto de {a} e {b} é: {multiplicar(a,b):.2f} ')
+    print(f'O produto de {a} e {b} é: {multiplicar.multiplicar(a,b):.2f} ')
 
 elif opcao == 4:
-    print(f'A divisão de {a} e {b} é: {dividir(a,b):.2f} ')
+    print(f'A divisão de {a} e {b} é: {dividir.dividir(a,b):.2f} ')
 
 elif opcao == 5:
-    print(f'A divisão inteira de {a} e {b} é: {dividir_inteiro(a,b):.2f} ')
+    print(f'A divisão inteira de {a} e {b} é: {divisao_inteira.divisao_inteira(a,b):.2f} ')
 
 elif opcao == 6:
-    print(f'O resto da divisão de {a} e {b} é: {resto_divisao(a,b):.2f} ')
+    print(f'O resto da divisão de {a} e {b} é: {resto_divisao.resto_divisao(a,b):.2f} ')

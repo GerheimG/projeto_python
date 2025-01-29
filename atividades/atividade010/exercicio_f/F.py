@@ -7,16 +7,10 @@
 # utilizando uma estrutura de repetição for.
 
 import os
-
+from receber_listas.listas import receber_dicionario
 
 os.system('cls')
 
-def receber_dicionario(lista_1, lista_2):
-    dicionario = {}
-    for keys, valeus in zip(lista_1, lista_2):
-        dicionario[keys] = valeus 
-
-    return dicionario
 
 lista_1 = ['Nome', 'Peso', 'Idade']
 lista_2 = ['john', 40, 18]
