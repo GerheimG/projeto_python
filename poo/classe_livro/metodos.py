@@ -1,9 +1,7 @@
-import os 
-
-
-os.system('cls')
+import os
 
 class Livro:
+
     def __init__(self,titulo,autor,ano_publicacao,numero_pag):
         self.titulo = titulo
         self.autor = autor
@@ -46,8 +44,3 @@ livro1 = Livro('O Senhor dos Anéis', 'J.R.R. Tolkien', 1954, 234)
 livro2 = Livro('1984', 'George Orwell', 1949, 532)
 livro3 = Livro('Dom Casmurro', 'Machado de Assis', 1899, 342)
 livro4 = livro1.cadastrar_livro()
-
-
-livro1.exibir_info()
-livro2.exibir_info()
-livro3.exibir_info()
