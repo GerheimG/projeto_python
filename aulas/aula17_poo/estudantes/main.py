@@ -23,7 +23,7 @@ def main():
     # Exibe os resultados de todos os estudantes cadastrados
     exibir_resultados(estudantes)
 
-    # Bloco que garante que a função main() só será executada
-    # quando o arquivo for executado diretamente e não quando for importado como módulo
-    if __name__ == '__main__':
-        main()
+# Bloco que garante que a função main() só será executada
+# quando o arquivo for executado diretamente e não quando for importado como módulo
+if __name__ == '__main__':
+    main()
