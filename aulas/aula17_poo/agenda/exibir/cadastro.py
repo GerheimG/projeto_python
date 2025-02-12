@@ -1,5 +1,5 @@
 import os
-from agenda import adicionar_compromisso
+from exibir.agenda import adicionar_compromisso
 
 
 def cadastrar_compromisso(agenda):

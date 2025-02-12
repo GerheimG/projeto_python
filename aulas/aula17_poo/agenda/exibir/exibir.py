@@ -1,5 +1,5 @@
 import os
-from agenda import listar_compromissos
+from exibir.agenda import listar_compromissos
 
 
 def exibir_agenda(agenda):

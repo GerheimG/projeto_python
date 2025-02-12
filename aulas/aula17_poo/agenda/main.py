@@ -1,6 +1,6 @@
 import os
 from exibir.cadastro import cadastrar_compromisso
-from exibir import exibir_agenda
+from exibir.exibir import exibir_agenda
 
 def main():
     os.system('cls')
