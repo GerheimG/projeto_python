@@ -1,6 +1,6 @@
 import os
-from cadastro import cadastrar_estudante
-from resultado import exibir_resultados
+from modulos.cadastro import cadastrar_estudante
+from modulos.resultado import exibir_resultados
 
 
 def main():
