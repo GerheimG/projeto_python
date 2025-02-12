@@ -1,4 +1,4 @@
-from modulos.estudante import Estudante
+from estudante import Estudante
 
 def cadastrar_estudante():
     nome = input('Digite o nome do estudante: ')
