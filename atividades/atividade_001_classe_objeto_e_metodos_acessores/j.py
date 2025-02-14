@@ -10,28 +10,30 @@ class Retangulo:
     def __init__(self,base,altura):
         self._base = base
         self._altura = altura
-        
-    def get_base(self):
+    
+    @property
+    def base(self):
         return self._base
     
-    def get_altura(self):
+    @property
+    def altura(self):
         return self._altura
     
-    def set_base(self,base):
+    @base.setter
+    def base(self,base):
         self._base = base
     
-    def set_altura(self,altura):
+    @altura.setter
+    def altura(self,altura):
         self._altura = altura
     
     def calcular_perimetro(self):
-        perimetro = 2 * (self._base + self._altura)
+        perimetro = 2 * (self.base + self.altura)
         return perimetro
     
-    
-    
     def exibir_info(self):
-        print(f'Base do retângulo: {self.get_base()}')
-        print(f'Altura do retângulo: {self.get_altura()}')
+        print(f'Base do retângulo: {self.base}')
+        print(f'Altura do retângulo: {self.altura}')
         print(f'Perimetro do retângulo: {self.calcular_perimetro()}')
 
 

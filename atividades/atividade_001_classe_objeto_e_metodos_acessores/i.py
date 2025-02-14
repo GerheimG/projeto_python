@@ -10,10 +10,13 @@ class Dolar:
     def __init__(self,dolares):
         self._dolares = dolares
     
-    def get_dolar(self):
+
+    @property
+    def dolar(self):
         return self._dolares
     
-    def set_dolar(self,dolares):
+    @dolar.setter
+    def dolar(self,dolares):
         self._dolares = dolares
     
     def cotacao_dolar(self):
@@ -21,7 +24,7 @@ class Dolar:
         return valor_dolar
 
     def exibir_info(self):
-        print(f'O valor em reais: {self.get_dolar()}')
+        print(f'O valor em reais: {self.dolar}')
         print(f'Em dólar: {self.cotacao_dolar():.2f}')
 
 dolares = float(input('Insira o calor em reais: '))

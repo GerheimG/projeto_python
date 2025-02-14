@@ -10,15 +10,17 @@ class Tabela:
     def __init__(self,inteiro):
         self._inteiro = inteiro
     
-    def get_inteiro(self):
+    @property
+    def inteiro(self):
         return self._inteiro
     
-    def set_inteiro(self,inteiro):
+    @inteiro.setter
+    def inteiro(self,inteiro):
         self._inteiro = inteiro
     
     def tabuada(self,):
         for i in range(1,11):
-            print(self.get_inteiro() * i, end=' | ')
+            print(self.inteiro * i, end=' | ')
             
     
 
