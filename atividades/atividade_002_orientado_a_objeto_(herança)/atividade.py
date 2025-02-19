@@ -9,15 +9,6 @@
 
 
 
-
-
-
-#Nao funciona
-
-
-
-
-
 import os
 from datetime import datetime
 
@@ -25,113 +16,57 @@ os.system('cls')
 
 class Produto:
     def __init__(self,nome,preco,categoria):
-        self._nome = nome
-        self._preco = preco
-        self._categoria = categoria
+        self.nome = nome
+        self.preco = preco
+        self.categoria = categoria
+        self.lista = []
     
-    @property
-    def nome(self):
-        return self._nome
-    
-    @property
-    def preco(self):
-        return self._preco
-    
-    @property
-    def categoria(self):
-        return self._categoria
-    
-    @nome.setter
-    def nome(self,nome):
-        self._nome = nome
-    
-    @preco.setter
-    def preco(self,preco):
-        self._preco = preco
-    
-    @categoria.setter
-    def categoria(self,categoria):
-        self._categoria = categoria
-    
-
     def aplicar_desconto(self):
         pass
 
+
 class Eletronico(Produto):
-    def __init__(self):
-        if self.categoria == 'Eletronico':
-            return self.preco * 0.10
+    def __init__(self, nome, preco, categoria):
+        super().__init__(nome, preco, categoria)
+        self.desconto = 10
+    
+    def aplicar_desconto(self):
+        return self.preco - (self.preco * self.desconto / 100)
 
 class Roupa(Produto):
-    def __init__(self):
-        if self.categoria == 'Roupa':
-            colecao = input('Insira a coleção (Verão ou outras): ')
-            if colecao == 'Verao':
-                return self.preco * 0.20
-            else:
-                return self.preco * 0.05
+    def __init__(self, nome, preco, categoria):
+        super().__init__(nome, preco, categoria)
+        self.desconto_verao = 20
+        self.desconto = 5
+    
+    def aplicar_desconto(self):
+        return self.preco - (self.preco * self.desconto / 100)
 
 class Alimento(Produto):
-    def __init__(self):
-        data_limite = datetime.date(2030, 10, 20)
-        if self.categoria == 'Alimento':
-            validade = input('Insira a validade (aaaa/mm/dd) ')
-            datetime.strptime(validade, '%Y/%m/%d')
-            if validade > data_limite:
-                return self.preco * 0.15
-            else:
-                pass
-            
-            
+    def __init__(self, nome, preco, categoria):
+        super().__init__(nome, preco, categoria)
+        self.desconto = 15
+    
+    def aplicar_desconto(self):
+        return self.preco - (self.preco * self.desconto / 100)
 
-while True:
-    produtos = {}
-    estoque = []
-    print('-' * 60)
-    pergunta = input('Cadastrar produto? (S/N): ').upper().strip()
-    os.system('cls')
-    if pergunta == 'S':
-        while True:
-            nome = input('Insira o nome do produto: ').capitalize().strip()
-            if any(produtos['Nome'] == nome for produtos in estoque):
-                print('Nome indisponivel.')
-                input('Pressione enter...')
-                continue
-            break
-        
-        while True:
-            try:
-                preco = float(input('Insira o preço do produto: '))
-                if preco < 0:
-                    print('O preço deve ser um valor positivo.Tente novamente.')
-                    continue
-                break
-            except ValueError:
-                print('Valor inválido para preço.Tente novamente.')
-        
-        categoria = input('Insira a categoria do produto: ')
 
-        produtos= {
-            'Nome': nome,
-            'Preço': preco,
-            'Categoria': categoria
-            }
 
-        estoque.append(produtos)
 
-        print("="*50)
-        print("     *** Produto Cadastrado com sucesso ***")
-        print("="*50)
 
-        
-    elif pergunta == 'N':
-        print('Fechando.')
-        break
+# Teste
+produto = Eletronico("TV", 1000, "Eletrônicos")
+print('Nome:', produto.nome)
+print("Preço original:", produto.preco)
+print("Preço com desconto:", produto.aplicar_desconto())
 
-for item in estoque:
-            print(f'Nome: {item["Nome"]} '
-                f'| Categoria: {item["Categoria"]} | Preço: {item["Preço"]} '
-                )
-            print('=' * 65)
+produto1 = Roupa('Blusa', 500, 'Roupa')
+print('Nome:', produto1.nome)
+print("Preço original:", produto1.preco)
+print("Preço com desconto:", produto1.aplicar_desconto())
 
-cadastro = Produto(nome,preco,categoria)
+produto2 = Alimento('Banana', 40, 'Alimento')
+print('Nome:', produto2.nome)
+print("Preço original:", produto2.preco)
+print("Preço com desconto:", produto2.aplicar_desconto())
+
