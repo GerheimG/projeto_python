@@ -20,6 +20,10 @@ class Produto:
         self.preco = preco
         self.categoria = categoria
         self.lista = []
+        self.lista.append(nome)
+        self.lista.append(preco)
+        self.lista.append(categoria)
+        print(self.lista)
     
     def aplicar_desconto(self):
         pass
@@ -70,3 +74,9 @@ print('Nome:', produto2.nome)
 print("Preço original:", produto2.preco)
 print("Preço com desconto:", produto2.aplicar_desconto())
 
+nome = input(':')
+preco = float(input(':'))
+categoria = input(':')
+
+
+produto3 = Produto(nome,preco,categoria)
