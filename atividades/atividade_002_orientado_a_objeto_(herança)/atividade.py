@@ -104,7 +104,7 @@ preco = float(input('preco:'))
 categoria = input('categoria:')
 
 
-produto3 = Alimento(nome,preco,categoria)
+produto3 = Roupa(nome,preco,categoria)
 print('Nome:', produto3.nome)
 print("Preço original:", produto3.preco)
 print("Preço com desconto:", produto3.aplicar_desconto())

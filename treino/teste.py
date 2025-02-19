@@ -66,34 +66,14 @@ class Alimento(Produto):
             return self.preco
 
 
+while True:
+    nome = input('Nome: ')
+    preco = float(input('Preço: '))
+    categoria = input('Categoria: ')
+    if categoria == 'Alimento':
+        produto = Alimento(nome,preco,categoria)
+        produto.aplicar_desconto()
 
 
 
-# # Teste
-# produto = Eletronico("TV", 1000, "Eletrônicos")
-# print('Nome:', produto.nome)
-# print("Preço original:", produto.preco)
-# print("Preço com desconto:", produto.aplicar_desconto())
-# print('-'*60)
 
-# produto1 = Roupa('Blusa', 500, 'Roupa')
-# print('Nome:', produto1.nome)
-# print("Preço original:", produto1.preco)
-# print("Preço com desconto:", produto1.aplicar_desconto())
-# print('-'*60)
-
-# produto2 = Alimento('Banana', 40, 'Alimento')
-# print('Nome:', produto2.nome)
-# print("Preço original:", produto2.preco)
-# print("Preço com desconto:", produto2.aplicar_desconto())
-
-
-nome = input('nome:')
-preco = float(input('preco:'))
-categoria = input('categoria:')
-
-
-produto3 = Alimento(nome,preco,categoria)
-print('Nome:', produto3.nome)
-print("Preço original:", produto3.preco)
-print("Preço com desconto:", produto3.aplicar_desconto())
