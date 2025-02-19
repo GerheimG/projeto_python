@@ -73,7 +73,4 @@ while True:
     if categoria == 'Alimento':
         produto = Alimento(nome,preco,categoria)
         produto.aplicar_desconto()
-
-
-
-
+        print(f'{produto.aplicar_desconto()}')
