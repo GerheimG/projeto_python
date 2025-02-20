@@ -83,7 +83,7 @@ class Roupa(Produto):
 class Alimento(Produto):
     def __init__(self, nome, preco, validade):
         super().__init__(nome, preco, 'Alimento')  # Define a categoria como 'Alimento'
-        self.validade = datetime.strptime(validade, '%Y/%m/%d')  # Converte a data de validade para um objeto datetime
+        self.validade = validade # A validade ja foi formatada na entrada de dados
         self.aplicar_desconto()  # Aplica desconto automaticamente
 
     # Método que aplica desconto se o produto estiver próximo da validade
@@ -129,7 +129,14 @@ while True:
         produto_geral.estoque.append(Roupa(nome, preco, subcategoria))  # Adiciona a roupa no estoque
 
     elif categoria == "Alimento":
-        validade = input("Data de validade (YYYY-MM-DD): ").strip()  # Usuário vai colocar a data de validade do alimento
+        while True:
+            try:
+                validade = input("Data de validade (YYYY-MM-DD): ").strip()  # Usuário vai colocar a data de validade do alimento
+                validade = datetime.strptime(validade, '%Y/%m/%d')
+                break
+            except ValueError:
+                print('Insira uma data válida no formato YYYY/MM/DD...')
+                continue
         produto_geral.estoque.append(Alimento(nome, preco, validade))  # Adiciona o alimento no estoque
 
     else:
