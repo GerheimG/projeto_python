@@ -11,17 +11,44 @@
 
 import os  
 from datetime import datetime  
-
+import time
 
 os.system('cls')
 
 # Classe base Produto
 class Produto:
     def __init__(self, nome, preco, categoria):
-        self.nome = nome  # Nome do produto
-        self.preco = preco  # Preço do produto
-        self.categoria = categoria  # Categoria do produto
+        self._nome = nome  # Nome do produto
+        self._preco = preco  # Preço do produto
+        self._categoria = categoria  # Categoria do produto
         self.estoque = []  # Lista para armazenar os produtos cadastrados
+    
+    # Getter e setter para o atributo 'nome'
+    @property
+    def nome(self):
+        return self._nome
+
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
+
+    # Getter e setter para o atributo 'preco'
+    @property
+    def preco(self):
+        return self._preco
+
+    @preco.setter
+    def preco(self, preco):
+        self._preco = preco
+
+    # Getter e setter para o atributo 'categoria'
+    @property
+    def categoria(self):
+        return self._categoria
+
+    @categoria.setter
+    def categoria(self, categoria):
+        self._categoria = categoria
 
 
     # Método para aplicar desconto vou usar nas subclasses
@@ -30,24 +57,40 @@ class Produto:
 
     # Método para listar todos os produtos cadastrados
     def listar_produtos(self):
-        print('Produtos Cadastrados ===')
+        print('=== Produtos Cadastrados ===')
         for produto in self.estoque:
             print(f"Nome: {produto.nome}")
             print(f"Categoria: {produto.categoria}")
             print(f"Preço: R$ {produto.preco:.2f}")
-            print("-" * 30)
+            print("—" * 30)
 
     # Método para filtrar produtos por categoria
     def filtrar_por_categoria(self, categoria):
-        # Cria uma lista com os produtos que pertencem à categoria informada
-        produtos_filtrados = [produto for produto in self.estoque if produto.categoria.lower() == categoria.lower()]
+        
+        produtos_filtrados = [produto for produto in self.estoque if \
+            produto.categoria.lower() == categoria.lower()]
+        """
+        Cria uma lista apenas com os produtos do estoque que pertencem a categoria que o usuário escolheu.
+
+        Ela percorre todos os produtos que estão na lista 'self.estoque' e pega aqueles que a 
+        categoria seja igual a categoria que o usuário escolheu.
+
+        self.estoque: é a lista de objetos da classe Produto, cada um com uma 'categoria'.
+        categoria: string com o nome da categoria fornecida pelo usuário para filtrar os produtos.
+
+        Ela traz uma lista de objetos 'produto' que possuem a categoria correspondente à categoria 
+        escolhida pelo usuário.
+
+        Se 'self.estoque' contém produtos das categorias "Eletrônico", "Roupa", e "Alimento",
+        e 'categoria' for "eletrônico", a lista vai ter apenas os produtos dessa categoria.
+        """
         
         if produtos_filtrados:
-            print(f"Produtos na categoria {categoria} ===")
+            print(f"=== Produtos na categoria {categoria} ===")
             for produto in produtos_filtrados:
                 print(f"Nome: {produto.nome}")
                 print(f"Preço: R$ {produto.preco:.2f}")
-                print("-" * 30)
+                print("—" * 30)
         else:
             print(f"Nenhum produto encontrado na categoria {categoria}.")
 
@@ -79,7 +122,7 @@ class Roupa(Produto):
 class Alimento(Produto):
     def __init__(self, nome, preco, validade):
         super().__init__(nome, preco, 'Alimento')  # Define a categoria como 'Alimento'
-        self.validade = datetime.strptime(validade, '%Y/%m/%d')  # Converte a data de validade para um objeto datetime
+        self.validade = validade # A validade ja foi formatada na entrada de dados
         self.aplicar_desconto()  # Aplica desconto automaticamente
 
     # Método que aplica desconto se o produto estiver próximo da validade
@@ -94,9 +137,29 @@ produto_geral = Produto("Banana", 50, "Alimento")
 
 # Loop para cadastrar produtos no sistema
 while True:
-    print("\nCadastro de Produto")
-    nome = input("Nome do produto: ")  # Usuário coloca o nome do produto
-    preco = float(input("Preço (R$): "))  # Usuário coloca o preço
+    print("\n=== Cadastro de Produto ===")
+    print('—'*30)
+    while True:
+        
+        nome = input("Nome do produto: ").capitalize().strip()  # Usuário coloca o nome do produto
+        if nome == '':
+            input('Preencha corretamente...')
+            os.system('cls')
+            continue
+        else:
+            break
+
+    while True:
+        print('—'*30)
+        preco = float(input("Preço (R$): "))  # Usuário coloca o preço
+        if preco <= 0 or preco == '':
+            input('Preencha corretamente...')
+            os.system('cls')
+            continue
+        else:
+            break
+
+    print('—'*30)
     categoria = input("Categoria (Eletrônico, Roupa, Alimento): ").strip().capitalize()  # Usuário escolhe a categoria
 
     # Vê qual é a categoria e cria um objeto dele
@@ -104,29 +167,50 @@ while True:
         produto_geral.estoque.append(Eletronico(nome, preco))  # Adiciona o produto no estoque
     
     elif categoria == "Roupa":
+        print('—'*30)
         subcategoria = input("Coleção (Verão ou Outra): ").strip().capitalize()  # Pergunta se é coleção de verão ou outra
         produto_geral.estoque.append(Roupa(nome, preco, subcategoria))  # Adiciona a roupa no estoque
 
     elif categoria == "Alimento":
-        validade = input("Data de validade (YYYY-MM-DD): ").strip()  # Usuário vai colocar a data de validade do alimento
+        while True:
+            try:
+                validade = input("Data de validade (YYYY-MM-DD): ").strip()  # Usuário vai colocar a data de validade do alimento
+                validade = datetime.strptime(validade, '%Y/%m/%d')
+                break
+            except ValueError:
+                print('Insira uma data válida no formato YYYY/MM/DD...')
+                continue
         produto_geral.estoque.append(Alimento(nome, preco, validade))  # Adiciona o alimento no estoque
 
     else:
         print("Categoria inválida! Tente novamente.")  # Mensagem de erro se não for uma das categorias acima
         continue  # Volta para o início do loop
 
-    print(f"Produto {nome} cadastrado com sucesso!\n")  # Mostra que cadastrou o produto
+    print('—'*30)
+    print(f"=== Produto {nome} cadastrado com sucesso! ===\n")  # Mostra que cadastrou o produto
 
     # Pergunta se o usuário vai cadastrar mais produtos
-    continuar = input("Deseja cadastrar outro produto? (s/n): ").strip().lower()
+    continuar = input("=== Deseja cadastrar outro produto? (s/n): ").strip().lower()
+    print('   \\\Limpando terminal//')
+    time.sleep(2)
+    os.system('cls')
     if continuar != 's':  # Se não quiser continuar, ele vai sair do loop
+        print('   \\\Limpando terminal//')
+        time.sleep(2)
+        os.system('cls')
         break
 
 # Lista todos os produtos cadastrados
 produto_geral.listar_produtos()
 
 # Pergunta pra saber se o usuáiro deseja filtrar os produtos por categoria
-filtro = input("\nDeseja filtrar os produtos por categoria? (s/n): ").strip().lower()
+filtro = input("\n=== Deseja filtrar os produtos por categoria? (s/n): ").strip().lower()
+print('   \\\Limpando terminal//')
+time.sleep(2)
+os.system('cls')
+
 if filtro == 's':
-    categoria_filtro = input("Digite a categoria para filtrar (Eletrônico, Roupa, Alimento): ").strip().capitalize()
+    categoria_filtro = input("=== Digite a categoria para filtrar (Eletrônico, Roupa, Alimento): ").strip().capitalize()
+    time.sleep(1)
+    os.system('cls')
     produto_geral.filtrar_por_categoria(categoria_filtro)  # Filtra e mostra os produtos da categoria escolhida
