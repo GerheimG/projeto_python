@@ -184,11 +184,11 @@ class Cadastrar(Produto):
         # Pergunta se o usuário vai cadastrar mais produtos
         continuar = input("=== Deseja cadastrar outro produto? (s/n): ").strip().lower()
         print('   \\\Limpando terminal//')
-        time.sleep(2)
+        time.sleep(1)
         os.system('cls')
         if continuar != 's':  # Se não quiser continuar, ele vai sair do loop
             print('   \\\Limpando terminal//')
-            time.sleep(2)
+            time.sleep(1)
             os.system('cls')
             break
 
@@ -198,7 +198,7 @@ produto_geral.listar_produtos()
 # Pergunta pra saber se o usuáiro deseja filtrar os produtos por categoria
 filtro = input("\n=== Deseja filtrar os produtos por categoria? (s/n): ").strip().lower()
 print('   \\\Limpando terminal//')
-time.sleep(2)
+time.sleep(1)
 os.system('cls')
 
 if filtro == 's':
