@@ -24,7 +24,7 @@ class Produto:
         self.estoque = []  # Lista para armazenar os produtos cadastrados
 
 
-    # Método para aplicar desconto (será sobrescrito nas subclasses)
+    # Método para aplicar desconto vou usar nas subclasses
     def aplicar_desconto(self):
         return self.preco  # Por padrão, não aplica nenhum desconto
 
