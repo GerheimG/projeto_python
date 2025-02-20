@@ -12,29 +12,33 @@ class Produto:
         self._categoria = categoria  # Categoria do produto
         self.estoque = []  # Lista para armazenar os produtos cadastrados
     
+    # Getter e setter para o atributo 'nome'
     @property
     def nome(self):
         return self._nome
-    
+
     @nome.setter
-    def nome(self,nome):
+    def nome(self, nome):
         self._nome = nome
 
+    # Getter e setter para o atributo 'preco'
     @property
     def preco(self):
         return self._preco
 
     @preco.setter
-    def preco(self,preco):
+    def preco(self, preco):
         self._preco = preco
 
+    # Getter e setter para o atributo 'categoria'
     @property
     def categoria(self):
         return self._categoria
 
     @categoria.setter
-    def categoria(self,categoria):
+    def categoria(self, categoria):
         self._categoria = categoria
+
 
     # Método para aplicar desconto vou usar nas subclasses
     def aplicar_desconto(self):
@@ -52,7 +56,8 @@ class Produto:
     # Método para filtrar produtos por categoria
     def filtrar_por_categoria(self, categoria):
         
-        produtos_filtrados = [produto for produto in self.estoque if produto.categoria.lower() == categoria.lower()]
+        produtos_filtrados = [produto for produto in self.estoque if \
+            produto.categoria.lower() == categoria.lower()]
         """
         Cria uma lista apenas com os produtos do estoque que pertencem a categoria que o usuário escolheu.
 
