@@ -61,7 +61,7 @@ class Produto:
         """
         Cria uma lista apenas com os produtos do estoque que pertencem a categoria que o usuário escolheu.
 
-        Ela percorre todos os produtos que estão na lista 'self.estoque' e pega aqueles que a 
+        Ela percorre todos os produtos que estão na lista 'self.estoque' e pega aqueles que a   
         categoria seja igual a categoria que o usuário escolheu.
 
         self.estoque: é a lista de objetos da classe Produto, cada um com uma 'categoria'.
