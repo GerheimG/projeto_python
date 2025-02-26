@@ -1,30 +1,63 @@
-A - Cite quatro sistemas que você tenha usado/visualizado recentemente e que provavelmente tenha um SGBD para realizar a persistência dos dados.​
-
-Facebook,instagram,banco e shein
-
-
-B - Detalhe quais são as principais funções de um administrador de um banco de dados​
-
-definir a melhor estrutura e garantir a segurança e ter copias de segurança
-
-
-C - Descreva pelos menos 3 tabelas que você acredita que precisam ser usadas para armazenar informações em um sistema de redes sociais como o Facebook.​
-
-tabela de nome, tabela de email e tabela de idade
+A - Cite quatro sistemas que você tenha utilizado ou analisado recentemente,
+ nos quais a persistência de dados é gerenciada por um Sistema de Gerenciamento de Banco de Dados (SGBD). 
+ Para cada exemplo, explique de que forma o SGBD contribui para a eficiência e integridade dos dados no funcionamento do sistema.
+    
+    R:  Facebook: O SGBD armazena as informações dos usuários, postagens e conexões, garantindo a integridade dos dados.
+        Instagram: O SGBD gerencia dados de usuários, fotos e interações, oferecendo alta disponibilidade e escalabilidade.
+        Amazon: O SGBD gerencia dados de clientes, produtos e pedidos, garantindo eficiência em buscas rápidas por produtos.
+        Google Drive: O SGBD armazena arquivos e metadados, garantindo a integridade dos dados com backup.
 
 
-D - Liste os primeiros passos que você seguiria para a criação de um banco de dados para uma empresa e justifique.​
 
-definir a melhorestrutura, estabelecer medidas de segurança e garantir o funcionamento
+B - Descreva as principais funções de um administrador de banco de dados (DBA) em um contexto corporativo, 
+ detalhando a importância desse profissional não apenas para a manutenção do banco de dados, mas também para o 
+ sucesso do desenvolvimento e operação de sistemas em uma organização.
+
+    R: Ele é responsável por gerenciar, manter e otimizar o banco de dados,
+    garantindo a segurança e o desempenho. Além disso, realiza backups regulares
+    e monitora a performance do banco de dados para garantir seu funcionamento eficiente.
 
 
-E - Defina as principais categorias de modelos de dados.​
+C - Em um sistema de redes sociais como o Facebook, quais tabelas você considera essenciais para armazenar informações importantes,
+ e como elas se inter-relacionam para garantir a funcionalidade do sistema? Detalhe pelo menos três tabelas e discuta a relevância 
+ de cada uma para o desempenho da plataforma.
+    
+    R: Uma das tabelas seria a de Usuários, para armazenar os dados de cada membro 
+    tabela Amigos, para gerenciar as conexões entre os usuários
+    tabela Postagens, para armazenar o conteúdo postado. 
+    Essas tabelas se relacionam, permitindo a personalização do feed, o controle de visibilidade
+    e as interações entre os usuários
 
-relacional: sistema de gerenciamento de conteudo, como gestao de vendas e estoque
-hierarquico: envolve dados com estrutura fixa e hierarquica como organogramas e estruturas de diretórios.
-rede: relacionamento complexo entre dados como gestao de projetos e redes sociais
-OOB: necessita de uma estrutura flexivel para modelar dados complexos
 
-F - Dê uma vantagem e uma desvantagem de se usar um SGBD em um sistema, justifique sua resposta.
+D - Quais são os primeiros passos que você adotaria para planejar a criação de um banco de dados para uma empresa de grande porte,
+ levando em consideração as necessidades específicas do negócio? Justifique cada decisão com base nos requisitos organizacionais e técnicos.
+    
+    R:  Levantamento de Requisitos: Entender as necessidades de dados da empresa
+        Análise de Performance: Garantir que o banco possa lidar com grandes volumes de dados e acessos simultâneos
+        Modelo de Dados: Escolher o modelo de dados mais adequado
+        SGBD: Selecionar um SGBD que atenda a necessidades de escalabilidade
+        Plano de Segurança: Garantir a segurança,  ter um backup para proteger os dados.
+        Testes: Realizar testes para garantir performance e funcionamento
 
-Uma desvantagem seria aplicações muito complexas dificeis de entender, e a vantagem seria diminuir a redundancia de dados
+
+
+E - Defina as principais categorias de modelos de dados, destacando suas características e
+ explicando qual delas seria mais adequada para diferentes tipos de sistemas de informação.
+    
+    R:  Hierárquico: Organiza dados em uma estrutura de árvore, eficiente para dados com relações claras (ex: sistemas de arquivos).
+        Rede: Permite múltiplos relacionamentos entre dados, útil para sistemas complexos (ex: telecomunicações).
+        Relacional: Organiza dados em tabelas, flexível e ideal para consultas complexas (ex: bancos de dados empresariais).
+        Orientado a Objetos: Combina dados e comportamentos em objetos, adequado para sistemas com interações complexas (ex: jogos)
+
+
+
+F - Apresente uma vantagem e uma desvantagem no uso de um Sistema de Gerenciamento de Banco de Dados (SGBD) em um sistema,
+ levando em conta fatores como escalabilidade, performance e complexidade. Justifique sua resposta.
+    
+    R:  Vantagens: Um SGBD garante integridade e consistência dos dados por meio de regras de integridade, evitando erros e perda de dados. 
+      Além disso, oferece escalabilidade, permitindo o crescimento do sistema com distribuição e replicação de dados, 
+      sem comprometer a performance em grandes volumes de dados e usuários.
+
+        Desvantagens: Em sistemas com grandes volumes de dados, o SGBD pode sofrer queda de desempenho se não for otimizado corretamente. 
+      Além disso, a utilização de um SGBD aumenta a complexidade do sistema, exigindo administração constante e ajustes, 
+      o que pode demandar mais recursos.
